@@ -1,0 +1,99 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+.slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.slider .img {
+  position: relative;
+  text-align: center;
+  color: aliceblue;
+}
+.slider img {
+  width: 100vw;
+  height: 100vh;
+}
+.slider .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content button {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f50;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.content button:hover {
+  background-color: #f05;
+}
+.btns {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btns span {
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid red;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btns span.active {
+  background-color: red;
+  border: 1px solid #fff;
+}
+.arrow {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+.arrow i {
+  width: 25px;
+  height: 25px;
+  background-color: #777;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.arrow i:hover {
+  opacity: 1;
+}
